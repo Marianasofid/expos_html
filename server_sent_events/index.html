@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Server-Sent Events API</title>
+
+</head>
+
+<body>
+
+<h2>Server-Sent Events</h2>
+
+<div id="result"></div>
+
+<script>
+
+if (typeof(EventSource) !== "undefined") {
+
+    const source = new EventSource("demo_sse.php");
+
+    source.onmessage = function(event) {
+
+        document.getElementById("result").innerHTML +=
+        event.data + "<br>";
+
+    };
+
+} else {
+
+    document.getElementById("result").innerHTML =
+    "Tu navegador no soporta Server-Sent Events.";
+
+}
+
+</script>
+
+</body>
+</html>
