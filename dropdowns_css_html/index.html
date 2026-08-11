@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            background: white;
+        }
+
+        .dropdown:hover .menu {
+            display: block;
+        }
+
+        .menu a {
+            display: block;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dropdown">
+        <button>Opciones</button>
+
+        <div class="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Contacto</a>
+            <a href="#">Ayuda</a>
+        </div>
+    </div>
+
+</body>
+</html>
